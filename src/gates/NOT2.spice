@@ -1,0 +1,9 @@
+* Not Gate
+* --------
+
+* Interface: not IN OUT VDD VCC
+
+.SUBCKT NOT IN OUT VDD GND
+
+Xinv IN OUT VDD GND INV
+.ENDS NOT
