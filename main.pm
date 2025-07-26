@@ -8,6 +8,7 @@
 .include "./src/subckts/NOT_SUBCKT.pm"
 .include "./src/subckts/AND2_SUBCKT.pm"
 .include "./src/subckts/OR2_SUBCKT.pm"
+.include "./src/subckts/XOR2_SUBCKT.pm"
 
 * --------------------------
 * SOURCE return Va(a), Vb(b)
@@ -19,7 +20,8 @@
 * --------
 *X_NOT a out vdd gnd NOT_SUBCKT
 *X_AND2 a b out vdd gnd AND2_SUBCKT
-X_OR2 a b out vdd gnd OR2_SUBCKT
+*X_OR2 a b out vdd gnd OR2_SUBCKT
+X_XOR2 a b out vdd gnd XOR2_SUBCKT
 
 
 * -------------------
