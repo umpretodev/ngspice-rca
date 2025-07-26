@@ -1,7 +1,5 @@
 * NOT GATE
 * --------
-* Interface: { "gate": NOT,  "input": IN, "output": OUT, "source": VDD }
-
 .SUBCKT NOT_SUBCKT in out vdd gnd
 
 Mpa out in vdd vdd PMOS W=105n L=32n

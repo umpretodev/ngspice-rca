@@ -1,7 +1,5 @@
-* AND GATE
+* AND2 GATE
 * --------
-* Interface: { "gate": AND,  "input": IN, "output": OUT, "source": VDD }
-
 .include "./NOT_SUBCKT.pm"
 
 
