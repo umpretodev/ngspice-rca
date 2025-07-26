@@ -1,22 +1,34 @@
 * SIMULATION
 * ----------
 
-
+* ------
 * GATES 
+* ------
 .include "./src/includes/32nm_HP.pm"
-.include "./src/gates/not.pm"
+.include "./src/subckts/NOT_SUBCKT.pm"
 
-* Fontes
-Vvdd vdd gnd 0.9
-Va a 0 PULSE(0 0.9 0n 0.1n 0.1n 5n 10n)
 
-* Instância da porta NOT
-X1 a out vdd gnd NOT
+* --------------------------
+* SOURCE return Va(a), Vb(b)
+* --------------------------
+.include "./src/sources/source.pm"
 
-* Controle da simulação
-.tran 0.01n 20n
+
+* --------
+* SETUP
+* --------
+X_NOT a out vdd gnd NOT_SUBCKT
+
+
+* -------------------
+* SIMULATION CONTROL
+* -------------------
+.tran 0.001n 20n
 .control
+	set xbrushwidth=3
+	set color0=white
+
 	run
-	plot a out + 2
+	plot a b + 2
 .endc
 .end
