@@ -6,18 +6,18 @@
 * ------
 .include "./src/includes/32nm_HP.pm"
 .include "./src/subckts/NOT_SUBCKT.pm"
-
+.include "./src/subckts/AND2_SUBCKT.pm"
 
 * --------------------------
 * SOURCE return Va(a), Vb(b)
 * --------------------------
 .include "./src/sources/source.pm"
 
-
 * --------
 * SETUP
 * --------
-X_NOT a out vdd gnd NOT_SUBCKT
+*X_NOT a out vdd gnd NOT_SUBCKT
+X_AND2 a b out vdd gnd AND2_SUBCKT
 
 
 * -------------------
@@ -29,6 +29,6 @@ X_NOT a out vdd gnd NOT_SUBCKT
 	set color0=white
 
 	run
-	plot a b + 2
+	plot a + 4 b + 2 out
 .endc
 .end
